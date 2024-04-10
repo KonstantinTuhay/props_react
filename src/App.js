@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+const App = () => {
+  const number = 1,
+    string = "something",
+    bool = true,
+    // obj = { df: 2 },
+    func = function () {
+      return "Hi";
+    },
+    arr = [1, 2, 3, 4, 5];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Component1 message1={number} />
+      <Component2 message2={string} />
+      <Component3 message3={bool} />
+      {/* <Component4 message4={obj} /> */}
+      <Component5 message5={func} />
+      <Component6 message6={arr} />
     </div>
   );
-}
+};
+
+const Component1 = ({ message1 }) => {
+  return <div>{message1}</div>;
+};
+
+const Component2 = ({ message2 }) => {
+  return <div>{message2}</div>;
+};
+
+const Component3 = ({ message3 }) => {
+  return <div>{message3}</div>;
+};
+
+// const Component4 = ({ message4 }) => {
+//   return <div>{message4}</div>;
+// };
+
+const Component5 = ({ message5 }) => {
+  return <div>{message5()}</div>;
+};
+
+const Component6 = ({ message6 }) => {
+  return <div>{message6}</div>;
+};
 
 export default App;

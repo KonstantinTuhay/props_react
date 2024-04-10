@@ -4,7 +4,7 @@ const App = () => {
   const number = 1,
     string = "something",
     bool = true,
-    // obj = { df: 2 },
+    obj = { df: 2 }, //Objects are not valid as a React child
     func = function () {
       return "Hi";
     },
@@ -15,7 +15,7 @@ const App = () => {
       <Component1 message1={number} />
       <Component2 message2={string} />
       <Component3 message3={bool} />
-      {/* <Component4 message4={obj} /> */}
+      <Component4 message4={obj} />
       <Component5 message5={func} />
       <Component6 message6={arr} />
     </div>
@@ -34,9 +34,9 @@ const Component3 = ({ message3 }) => {
   return <div>{message3}</div>;
 };
 
-// const Component4 = ({ message4 }) => {
-//   return <div>{message4}</div>;
-// };
+const Component4 = ({ message4 }) => {
+  return <div>{message4}</div>;
+};
 
 const Component5 = ({ message5 }) => {
   return <div>{message5()}</div>;

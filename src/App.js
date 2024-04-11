@@ -35,7 +35,7 @@ const Component3 = ({ message3 }) => {
 };
 
 const Component4 = ({ message4 }) => {
-  return <div>{message4}</div>;
+  return <div>{message4.df}</div>;
 };
 
 const Component5 = ({ message5 }) => {

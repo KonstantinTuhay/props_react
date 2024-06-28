@@ -4,7 +4,7 @@ const App = () => {
   const number = 1,
     string = "something",
     bool = true,
-    obj = { df: 2 }, //Objects are not valid as a React child
+    obj = { df: 2, swee: "true" }, //Objects are not valid as a React child
     func = function () {
       return "Hi";
     },
@@ -35,7 +35,7 @@ const Component3 = ({ message3 }) => {
 };
 
 const Component4 = ({ message4 }) => {
-  return <div>{message4.df}</div>;
+  return <div>{JSON.stringify(message4)}</div>;
 };
 
 const Component5 = ({ message5 }) => {
